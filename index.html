@@ -10,7 +10,8 @@
 <body>
     <div class="main">
         <div class="navbar">
-            <button onclick="ss()" class="Sbar"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
+            <button onclick="ss()"  class="Sbar"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
+            <button onclick="cl()"  class="closebar"><i class="fa-solid fa-xmark" style="color: #000000;"></i></button>
             <h1 class="head">Setting</h1>
             <div class="button">
                 <button onclick="btn1()" class="btn1">Profile</button>
@@ -25,58 +26,87 @@
             <div class="links1">
                 <h1 class="heads">Your Trips</h1>
                 <div class="link1"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check1" class="toggle"><label for="check1"></label></div></div></div>
                 <div class="link1"> <div><h1 class="head2">Reviews</h1>Receive request to write a reviews, rate your check-in, and upload photos.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check2" class="toggle"><label for="check2"></label></div></div></div>
                 <div class="link1"> <div><h1 class="head2">Message</h1>Receive message from host and guests.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check3" class="toggle"><label for="check3"></label></div></div></div>
             </div>
             <div class="links2">
                 <h1 class="heads">Travel Recommendation</h1>
                 <div class="link2"> <div><h1 class="head2">Inspiration & Deal</h1>Get Travels idea and suggestion discount and other deals.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check4" class="toggle"><label for="check4"></label></div></div></div>
                 <div class="link2"> <div><h1 class="head2">Local Activities</h1>Suggestion to do things near you</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check5" class="toggle"><label for="check5"></label></div></div></div>
             </div>
             <div class="links3">
                 <h1 class="heads">Your Account</h1>
                 <div class="link3"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check6" class="toggle"><label for="check6"></label></div></div></div>
                 <div class="link3"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check" class="toggle"><label for="check"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check7" class="toggle"><label for="check7"></label></div></div></div>
             </div>
         </div>
         <div class="profile">
-            <div class="image"></div>
+            <div class="image"><img class="Sprofile_photo" src="	https://lh3.googleusercontent.com/a/ACg8ocJ09LWm7emLlVlH6ndDJuiM2V8b_iox0oHDOSEVZgBKBNo=s360-c-no" alt=""></div>
             <div class="updates">
-                <div><input type="text"><input type="text"></div>
-                <div><input type="text"></div>
-                <div><input type="text"><input type=""></div>
-                <div><input type="text"><input type="text"></div>
-                <div><button class="button1">Udate information</button></div>
+                <div class="person_info"><input  placeholder="Name :"class="name" type="text"><input placeholder="Email :" class="email" type="text"></div>
+                <div class="address" ><input placeholder="Address :" class="Address" type="text"></div>
+                <div class="state"><input  placeholder="City :"class="city" type="text"><input placeholder="State :" class="states" type=""></div>
+                <div class="country"><input  placeholder="Pin code :"class="pincode" type="text"><input placeholder="Country :" class="countrys" type="text"></div>
+                <div class="buttons"><button class="button1">Update information</button></div>
             </div>
         </div>
     </div>
     <script>
-        const p=document.querySelector(".page");
-        const b2=document.querySelector(".btn2");
-        function btn2(){
-            p.classList.add("active");
-            b2.classList.add("bg");
-            n.classList.remove("dal");
-            h.classList.remove("heat");
-            b.classList.remove("bag");
-        }
-        const n=document.querySelector(".navbar");
-        const s=document.querySelector(".Sbar");
-        const h=document.querySelector(".head");
-        const b=document.querySelector(".button");
-        s.classList.add("sbar");
-        function ss(){
-            n.classList.add("dal");
-            h.classList.add("heat");
-            b.classList.add("bag");
-        }
-    </script>
+    const prof= document.querySelector(".profile")
+    const n = document.querySelector(".navbar");
+    const s = document.querySelector(".Sbar");
+    const h = document.querySelector(".head");
+    const b = document.querySelector(".button");
+    const p = document.querySelector(".page");
+    const b2= document.querySelector(".btn2");
+    const b1=document.querySelector(".btn1");
+    const c = document.querySelector(".closebar");
+    prof.classList.add("add")
+    b1.classList.add("bbg");
+    function ss() {
+        n.classList.add("dal");
+        h.classList.add("heat");
+        b.classList.add("bag");
+        s.classList.add("sbar")
+        c.classList.add("addcl")    
+    }
+
+    function btn2() {
+        p.classList.add("active");
+        b2.classList.add("bg");
+        n.classList.remove("dal");
+        h.classList.remove("heat");
+        b.classList.remove("bag");
+        prof.classList.remove("add");
+        b1.classList.remove("bbg");
+        c.classList.remove("addcl");
+        s.classList.remove("sbar");
+    }
+    function btn1(){
+        n.classList.remove("dal");
+        h.classList.remove("heat");
+        b.classList.remove("bag");
+        p.classList.remove("active");
+        prof.classList.add("add")
+        b2.classList.remove("bg");
+        b1.classList.add("bbg");
+        c.classList.remove("addcl");
+        s.classList.remove("sbar");
+    }
+    function cl() {
+    n.classList.remove("dal");
+    h.classList.remove("heat");
+    b.classList.remove("bag");
+    c.classList.remove("addcl");
+    s.classList.remove("sbar");
+}   
+</script>    
 </body>
 </html>
