@@ -1,356 +1,243 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(251, 159, 89);
-    align-items: center;
-}
-.navbar{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    border:none;
-    border-radius: 20px 0px 0px 20px;
-    padding-bottom: 10px;
-    background-color: rgb(255, 225, 217);
-}
-.button{
-    display: flex;
-    flex-direction: column;
-}
-.head{
-    margin: 20px 30px 40px;
-}
-.Sbar{
-    background-color: transparent;
-    border: none;
-    width: fit-content;
-    margin: 20px;
-    display: none;
-}
-.closebar{
-    background-color: transparent;
-    border: none;
-    width: fit-content;
-    margin: 20px;
-    display:block;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <button onclick="ss()"  class="Sbar"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
+            <button onclick="cl()"  class="closebar"><i class="fa-solid fa-xmark" style="color: #000000;"></i></button>
+            <h1 class="head">Setting</h1>
+            <div class="button">
+                <button onclick="btn1()" class="btn1">Profile</button>
+                <button onclick="btn2()" class="btn2">Notification</button>
+                <button onclick="btn3()" class="btn3">Currency</button>
+                <button onclick="btn4()" class="btn4">Pay Method</button>
+                <button onclick="btn5()" class="btn5">Terms of Service</button>
+                <button onclick="btn6()" class="btn6">Logout</button>
+            </div>
+        </div>
+        <div class="page">
+            <div class="links1">
+                <h1 class="heads">Your Trips</h1>
+                <div class="link1"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check1" class="toggle"><label class="Sbtn" for="check1"></label></div></div></div>
+                <div class="link1"> <div><h1 class="head2">Reviews</h1>Receive request to write a reviews, rate your check-in, and upload photos.</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check2" class="toggle"><label class="Sbtn" for="check2"></label></div></div></div>
+                <div class="link1"> <div><h1 class="head2">Message</h1>Receive message from host and guests.</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check3" class="toggle"><label class="Sbtn" for="check3"></label></div></div></div>
+            </div>
+            <div class="links2">
+                <h1 class="heads">Travel Recommendation</h1>
+                <div class="link2"> <div><h1 class="head2">Inspiration & Deal</h1>Get Travels idea and suggestion discount and other deals.</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check4" class="toggle"><label class="Sbtn" for="check4"></label></div></div></div>
+                <div class="link2"> <div><h1 class="head2">Local Activities</h1>Suggestion to do things near you</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check5" class="toggle"><label class="Sbtn" for="check5"></label></div></div></div>
+            </div>
+            <div class="links3">
+                <h1 class="heads">Your Account</h1>
+                <div class="link3"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check6" class="toggle"><label class="Sbtn" for="check6"></label></div></div></div>
+                <div class="link3"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check7" class="toggle"><label class="Sbtn" for="check7"></label></div></div></div>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="update-profile-container">
+                <h2>Update Profile</h2>
+        
+        <div class="form-group">
+            <label for="profile-photo">Profile Photo:</label>
+            <input type="file" id="profile-photo" name="profile-photo" accept="image/*" class="profile-photo-input">
+        </div>
 
-.btn1,.btn2,.btn3,.btn4,.btn5,.btn6{
-    padding-top:15px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 55px;
-    text-align: start;
-    border-top: 1px;
-    border-left: 0px;
-    border-right: 0px;
-    border-color:transparent;
-    border-radius: 0px 0px 5px 5px;
-    font-size: 120%;
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-}
-.btn2.bg{
-    background-color: rgb(253, 175, 175) !important;
-    border-top: 1px;
-    border-left: 0px;
-    border-right: 0px;
-    border-color: rgb(227, 48, 48);
-    border-radius: 0px 0px 5px 5px;
-}
-.btn1.bbg{
-    background-color: rgb(253, 175, 175) !important;
-    border-top: 1px;
-    border-left: 0px;
-    border-right: 0px;
-    border-color: rgb(227, 48, 48);
-    border-radius: 0px 0px 5px 5px;
-}
-.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover,.btn5:hover,.btn6:hover{
-    border-top: 1px;
-    border-left: 0px;
-    border-right: 0px;
-    border-color: rgb(227, 48, 48);
-    border-radius: 0px 0px 5px 5px;
-    background-color: rgb(253, 175, 175);
-}
-.toggle{
-    opacity: 0;
-    padding: 20px;
-}
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btn ,.toggle{
-z-index: 1;
-position: absolute;
-}
-#check{
-    width: 100%;
-    height: 100%;
-}
-.btn,label{
-display: block;
-width: 40px;
-height: 20px;
-z-index: 2;
-background-color: rgb(239, 193, 140);
-border-radius: 10px;
-}
-.btn label:before{
-content: "";
-display: block;
-position: absolute;
-width: 20px;
-height: 20px;
-background-color: rgb(174, 74, 3);
-border-radius: 10px;
-}
-.btn input:checked+label:before{
-background-color: rgb(5, 94, 64);
-border-radius: 10px;
-left: 20px;
-}
-.btn input:checked+label{
-background-color: greenyellow;
-}
-.links1{
-display: flex;
-flex-direction: column;
-padding: 5px;
-}
-.link1,.link2,.link3{
-    display: flex;
-    align-items: center;
-    flex-direction:row;
-    margin: 10px;
-    margin-right: 20px;
-    width: fit-content;
-}
-.main{
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
-}
-.heads{
-    color: rgb(249, 152, 152);
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right:10px; 
-    margin-top: 10px;
-}
-.Sbutton{
-    margin-left: 40px;
-    width: fit-content;
-}
-.page{
-    width: fit-content;
-    background-color: white;
-    display: none;
-    padding: 10px 50px;
-    padding-right: 400px;
-    border-radius: 0px 20px 20px 0px; 
-}
-.page.active{
-    display: block !important;
-    width: fit-content;
-    background-color: white;
-    padding: 10px 50px;
-    border-radius: 0px 20px 20px 0px; 
-}
-.head2{
-    font-size:20px;
-    margin-bottom: 10px;
-}
-.head{
-    color: rgb(44, 44, 44);
-    font-size: 40px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.profile{
-    display: none;
-}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" class="name-input">
+        </div>
 
-.closebar{
-    display: none;
-}
-@media (max-width:565px) {
-    .navbar{
-        background-color:white;
-        border: none; 
-        width: 100%;
-        border-radius: 0;
-        z-index: 3;
-    }
-   .navbar.dal {
-    background-color: rgb(255, 225, 217);
-    display: block !important;
-    transition: background-color 0.3s ease, display 0.3s ease !important;
-}
-   
-    .head{
-        display: none;
-        font-size: 10px;
-    }
-    .button{
-        display: none;
-    }
-    .button.bag{
-        display:block !important;
-    }
-    .Sbar{
-        display: block ;
-        background-color: transparent;
-        border: none;
-        width: fit-content;
-        margin: 20px;
-    }
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="email-input">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" class="address-input">
+        </div>
+
+        <div class="form-group two-column">
+            <div class="form-group">
+                <label for="city" class="city-state-label">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" class="city-input">
+            </div>
+
+            <div class="form-group">
+                <label for="state" class="city-state-label">State:</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state" class="state-input">
+            </div>
+        </div>
+
+        <div class="form-group two-column">
+            <div class="form-group">
+                <label for="country" class="country-pincode-label">Country:</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country" class="country-input">
+            </div>
+
+            <div class="form-group">
+                <label for="pincode" class="country-pincode-label">Pin Code:</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your pin code" class="pincode-input">
+            </div>
+        </div>
+
+        <button class="update-button" onclick="updateProfile()">Update Profile</button>
+            </div>
+        </div>
+        <div class="payment">
+        <div class="container">
+            <form>
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">billing  address</h3>
+                    <div class="inputbox">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="inputbox">
+                        <span>Email :</span>
+                        <input type="text" placeholder="email@gmail.com">
+                    </div>
+                    <div class="inputbox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Address">
+                    </div>
+                    <div class="inputbox">
+                        <span>City :</span>
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>State :</span>
+                            <input type="text" placeholder="State">
+                        </div>
+                        <div class="inputbox">
+                            <span>Zip code :</span>
+                            <input type="text" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
     
-    .Sbar.sbar{
-        display: none;
+                <div class="col">
+                    <h3 class="title">Payment</h3>
+                    <div class="inputbox">
+                        <span>Card accepted</span>
+                        <img src="https://www.pngitem.com/pimgs/m/1-18154_credit-cards-accepted-logo-hd-png-download.png" alt="">
+                    </div>
+                    <div class="inputbox">
+                        <span>Name on card :</span>
+                        <input type="text" placeholder="Mr.Name">
+                    </div>
+                    
+                    <div class="inputbox">
+                        <span>Credit car number :</span>
+                        <input type="text" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputbox">
+                        <span>Exp month :</span>
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>Exp year :</span>
+                            <input type="text" placeholder="2022">
+                        </div>
+                        <div class="inputbox">
+                            <span>CW :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="proceed to checkout" class="submit-btn">
+        </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        const bt4=document.querySelector(".btn4")
+    const container=document.querySelector(".payment")
+    const prof= document.querySelector(".profile")
+    const n = document.querySelector(".navbar");
+    const s = document.querySelector(".Sbar");
+    const h = document.querySelector(".head");
+    const b = document.querySelector(".button");
+    const p = document.querySelector(".page");
+    const b2= document.querySelector(".btn2");
+    const b1=document.querySelector(".btn1");
+    const c = document.querySelector(".closebar");
+    prof.classList.add("add")
+    b1.classList.add("bbg");
+    function btn4(){
+        bt4.classList.add("bg4")
+        container.classList.add("contain")
+        p.classList.remove("active");
+        b2.classList.remove("bg");
+        prof.classList.remove("add")
+        b1.classList.remove("bbg");
+        n.classList.remove("dal");
+        h.classList.remove("heat");
+        b.classList.remove("bag");
+        prof.classList.remove("add");
+        b1.classList.remove("bbg");
+        c.classList.remove("addcl");
+        s.classList.remove("sbar");
     }
-    .closebar.addcl{
-        background-color: transparent;
-        border: none;
-        width: fit-content;
-        margin: 20px;
-        display: block !important;
+    function ss() {
+        n.classList.add("dal");
+        h.classList.add("heat");
+        b.classList.add("bag");
+        s.classList.add("sbar")
+        c.classList.add("addcl")    
     }
-    .closebar.remove{
-        display: none;
+
+    function btn2() {
+        bt4.classList.remove("bg4")
+        container.classList.remove("contain")
+        p.classList.add("active");
+        b2.classList.add("bg");
+        n.classList.remove("dal");
+        h.classList.remove("heat");
+        b.classList.remove("bag");
+        prof.classList.remove("add");
+        b1.classList.remove("bbg");
+        c.classList.remove("addcl");
+        s.classList.remove("sbar");
     }
-    .heads{
-        font-size: 20px;
-        margin: 5px;
+    function btn1(){
+        bt4.classList.remove("bg4")
+        container.classList.remove("contain")
+        n.classList.remove("dal");
+        h.classList.remove("heat");
+        b.classList.remove("bag");
+        p.classList.remove("active");
+        prof.classList.add("add")
+        b2.classList.remove("bg");
+        b1.classList.add("bbg");
+        c.classList.remove("addcl");
+        s.classList.remove("sbar");
     }
-.page.active{
-    margin: 0px;
-    padding: 25px;
-    width: fit-content;
-    border-radius:0 ;
-    position: absolute;
-    z-index: 2;
-}
-.main {
-    height: fit-content;
-    width: 100%;
-    margin: 0;
-    position: relative; /* Add this line */
-}
-.navbar{
-    background-color:rgb(255, 225, 217) ;
-    margin: 0;
-    padding: 0;
-}
-.profile.add{
-    display: block;
-    position: absolute;
-    right: 3%;
-    z-index: 2;
-}
-body{
-    background-color: white;
-}
-.profile.add .Sprofile_photo {
-    margin-top: 70px; /* Add this line */
-}
-.profile.add .address {
-    width: 90%; /* Add this line */
-}
-
-}
-
-.image{
-    width:100%;
-    height: fit-content;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.Sprofile_photo{
-    height: 20%;
-    width: 20%;
-    border-radius: 50%;
-    margin: 10px;
-    margin-top: 20px;
-}
-.person_info,.sate{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-wrap: wrap;
-
-width: fit-content;
-}
-.name, .email,.city,.states,.pincode,.countrys{
-    font-size: 120%;
-    width: 200px;
-    height: 10px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-.state{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.profile.add{
-    display: block;
-    width: fit-content;
-    border-radius: 0px 20px 20px 0px;
-    background-color: white;
-}
-.updates{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.address,.buttons{
-    width: 100%;
-display: flex;
-justify-content: center;
-}
-.Address{
-    width: 95%;
-    padding: 10px;
-    margin: 10px;
-    font-size: 100%;
-    border-radius: 10px;
-    height: 10px;
-    border: 1px solid black;
-}
-.country{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.buttons{
-    border-radius: 0px 0px 20px 0px;
-    
-}
-.button1{
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
-    margin-bottom: 30px;
-    color: white;
-    border: none;
- background-color:rgb(32, 39, 133);
- border-radius: 20px;
-}
-.button1:hover{
-    background-color:rgb(46, 54, 175);
-}
+    function cl() {
+    n.classList.remove("dal");
+    h.classList.remove("heat");
+    b.classList.remove("bag");
+    c.classList.remove("addcl");
+    s.classList.remove("sbar");
+}   
+</script>    
+</body>
+</html>
