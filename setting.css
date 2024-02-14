@@ -428,6 +428,8 @@ display: none;
         background-color: rgb(255, 255, 255);
     }
     .container form{
+         margin-left: 20px;
+        margin-top: 60px;
         padding: 20px;
         width: 100%;
         background-color: white;
