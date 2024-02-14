@@ -26,39 +26,151 @@
             <div class="links1">
                 <h1 class="heads">Your Trips</h1>
                 <div class="link1"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check1" class="toggle"><label for="check1"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check1" class="toggle"><label class="Sbtn" for="check1"></label></div></div></div>
                 <div class="link1"> <div><h1 class="head2">Reviews</h1>Receive request to write a reviews, rate your check-in, and upload photos.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check2" class="toggle"><label for="check2"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check2" class="toggle"><label class="Sbtn" for="check2"></label></div></div></div>
                 <div class="link1"> <div><h1 class="head2">Message</h1>Receive message from host and guests.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check3" class="toggle"><label for="check3"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check3" class="toggle"><label class="Sbtn" for="check3"></label></div></div></div>
             </div>
             <div class="links2">
                 <h1 class="heads">Travel Recommendation</h1>
                 <div class="link2"> <div><h1 class="head2">Inspiration & Deal</h1>Get Travels idea and suggestion discount and other deals.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check4" class="toggle"><label for="check4"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check4" class="toggle"><label class="Sbtn" for="check4"></label></div></div></div>
                 <div class="link2"> <div><h1 class="head2">Local Activities</h1>Suggestion to do things near you</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check5" class="toggle"><label for="check5"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check5" class="toggle"><label class="Sbtn" for="check5"></label></div></div></div>
             </div>
             <div class="links3">
                 <h1 class="heads">Your Account</h1>
                 <div class="link3"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check6" class="toggle"><label for="check6"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check6" class="toggle"><label class="Sbtn" for="check6"></label></div></div></div>
                 <div class="link3"> <div><h1 class="head2">Orders</h1>order receive confirmation, modification, and modification alerts.</div>
-                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check7" class="toggle"><label for="check7"></label></div></div></div>
+                <div class="Sbutton"><div class="btn"><input type="checkbox" id="check7" class="toggle"><label class="Sbtn" for="check7"></label></div></div></div>
             </div>
         </div>
         <div class="profile">
-            <div class="image"><img class="Sprofile_photo" src="	https://lh3.googleusercontent.com/a/ACg8ocJ09LWm7emLlVlH6ndDJuiM2V8b_iox0oHDOSEVZgBKBNo=s360-c-no" alt=""></div>
-            <div class="updates">
-                <div class="person_info"><input  placeholder="Name :"class="name" type="text"><input placeholder="Email :" class="email" type="text"></div>
-                <div class="address" ><input placeholder="Address :" class="Address" type="text"></div>
-                <div class="state"><input  placeholder="City :"class="city" type="text"><input placeholder="State :" class="states" type=""></div>
-                <div class="country"><input  placeholder="Pin code :"class="pincode" type="text"><input placeholder="Country :" class="countrys" type="text"></div>
-                <div class="buttons"><button class="button1">Update information</button></div>
+            <div class="update-profile-container">
+                <h2>Update Profile</h2>
+        
+        <div class="form-group">
+            <label for="profile-photo">Profile Photo:</label>
+            <input type="file" id="profile-photo" name="profile-photo" accept="image/*" class="profile-photo-input">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" class="name-input">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="email-input">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" class="address-input">
+        </div>
+
+        <div class="form-group two-column">
+            <div class="form-group">
+                <label for="city" class="city-state-label">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" class="city-input">
+            </div>
+
+            <div class="form-group">
+                <label for="state" class="city-state-label">State:</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state" class="state-input">
             </div>
         </div>
+
+        <div class="form-group two-column">
+            <div class="form-group">
+                <label for="country" class="country-pincode-label">Country:</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country" class="country-input">
+            </div>
+
+            <div class="form-group">
+                <label for="pincode" class="country-pincode-label">Pin Code:</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your pin code" class="pincode-input">
+            </div>
+        </div>
+
+        <button class="update-button" onclick="updateProfile()">Update Profile</button>
+            </div>
+        </div>
+        <div class="payment">
+        <div class="container">
+            <form>
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">billing  address</h3>
+                    <div class="inputbox">
+                        <span>Full Name :</span>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="inputbox">
+                        <span>Email :</span>
+                        <input type="text" placeholder="email@gmail.com">
+                    </div>
+                    <div class="inputbox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="Address">
+                    </div>
+                    <div class="inputbox">
+                        <span>City :</span>
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>State :</span>
+                            <input type="text" placeholder="State">
+                        </div>
+                        <div class="inputbox">
+                            <span>Zip code :</span>
+                            <input type="text" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <h3 class="title">Payment</h3>
+                    <div class="inputbox">
+                        <span>Card accepted</span>
+                        <img src="https://www.pngitem.com/pimgs/m/1-18154_credit-cards-accepted-logo-hd-png-download.png" alt="">
+                    </div>
+                    <div class="inputbox">
+                        <span>Name on card :</span>
+                        <input type="text" placeholder="Mr.Name">
+                    </div>
+                    
+                    <div class="inputbox">
+                        <span>Credit car number :</span>
+                        <input type="text" placeholder="1111-2222-3333-4444">
+                    </div>
+                    <div class="inputbox">
+                        <span>Exp month :</span>
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="flex">
+                        <div class="inputbox">
+                            <span>Exp year :</span>
+                            <input type="text" placeholder="2022">
+                        </div>
+                        <div class="inputbox">
+                            <span>CW :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="proceed to checkout" class="submit-btn">
+        </form>
+        </div>
+    </div>
     </div>
     <script>
+        const bt4=document.querySelector(".btn4")
+    const container=document.querySelector(".payment")
     const prof= document.querySelector(".profile")
     const n = document.querySelector(".navbar");
     const s = document.querySelector(".Sbar");
@@ -70,6 +182,21 @@
     const c = document.querySelector(".closebar");
     prof.classList.add("add")
     b1.classList.add("bbg");
+    function btn4(){
+        bt4.classList.add("bg4")
+        container.classList.add("contain")
+        p.classList.remove("active");
+        b2.classList.remove("bg");
+        prof.classList.remove("add")
+        b1.classList.remove("bbg");
+        n.classList.remove("dal");
+        h.classList.remove("heat");
+        b.classList.remove("bag");
+        prof.classList.remove("add");
+        b1.classList.remove("bbg");
+        c.classList.remove("addcl");
+        s.classList.remove("sbar");
+    }
     function ss() {
         n.classList.add("dal");
         h.classList.add("heat");
@@ -79,6 +206,8 @@
     }
 
     function btn2() {
+        bt4.classList.remove("bg4")
+        container.classList.remove("contain")
         p.classList.add("active");
         b2.classList.add("bg");
         n.classList.remove("dal");
@@ -90,6 +219,8 @@
         s.classList.remove("sbar");
     }
     function btn1(){
+        bt4.classList.remove("bg4")
+        container.classList.remove("contain")
         n.classList.remove("dal");
         h.classList.remove("heat");
         b.classList.remove("bag");
