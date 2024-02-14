@@ -346,9 +346,9 @@ body {
 }
 
 .form-group.two-column {
-    margin:0;
     display: flex;
     gap: 20px;
+    margin-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -422,9 +422,9 @@ display: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding:25px;
+        padding:0px;
         min-height: 100vh;
-        padding-bottom: 70px;
+        padding-bottom: 20px;
         background-color: rgb(255, 255, 255);
     }
     .container form{
@@ -433,6 +433,7 @@ display: none;
         background-color: white;
     }
     .container form .row{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
@@ -472,15 +473,15 @@ display: none;
         margin-top: 5px;
     }
     .container form .row .col .inputbox img{
-        height: 60px;
-      
+        height: 30px;
+      margin-right: 5px;
         margin-top:5px ;
-        width: 260px;;
+        width: 235px;;
         filter: drop-shadow(0 0 1px black);
     }
     .container form .submit-btn{
         width: fit-content;
-        margin-top: 10px;
+        margin-top: 20px;
         padding: 12px;
         font-size: 17px;
         background-color: blue;
